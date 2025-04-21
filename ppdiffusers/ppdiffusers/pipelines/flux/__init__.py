@@ -1,3 +1,17 @@
+# Copyright (c) 2025 PaddlePaddle Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 from typing import TYPE_CHECKING
 
 from ...utils import (
@@ -8,7 +22,6 @@ from ...utils import (
     is_paddle_available,
     is_paddlenlp_available,
 )
-
 
 _dummy_objects = {}
 _additional_imports = {}
@@ -24,6 +37,7 @@ except OptionalDependencyNotAvailable:
 else:
     _import_structure["modeling_flux"] = ["ReduxImageEncoder"]
     _import_structure["pipeline_flux"] = ["FluxPipeline"]
+    _import_structure["pipeline_TeaCache_flux"] = ["FluxTeaCachePipeline"]
     _import_structure["pipeline_flux_control"] = ["FluxControlPipeline"]
     _import_structure["pipeline_flux_control_img2img"] = ["FluxControlImg2ImgPipeline"]
     _import_structure["pipeline_flux_control_inpaint"] = ["FluxControlInpaintPipeline"]
@@ -47,6 +61,7 @@ if TYPE_CHECKING or PPDIFFUSERS_SLOW_IMPORT:
         from .pipeline_flux_control import FluxControlPipeline
         from .pipeline_flux_control_img2img import FluxControlImg2ImgPipeline
         from .pipeline_flux_control_inpaint import FluxControlInpaintPipeline
+
         # from .pipeline_flux_controlnet import FluxControlNetPipeline
         # from .pipeline_flux_controlnet_image_to_image import FluxControlNetImg2ImgPipeline
         # from .pipeline_flux_controlnet_inpainting import FluxControlNetInpaintPipeline
@@ -54,6 +69,7 @@ if TYPE_CHECKING or PPDIFFUSERS_SLOW_IMPORT:
         from .pipeline_flux_img2img import FluxImg2ImgPipeline
         from .pipeline_flux_inpaint import FluxInpaintPipeline
         from .pipeline_flux_prior_redux import FluxPriorReduxPipeline
+        from .pipeline_TeaCache_flux import FluxTeaCachePipeline
 else:
     import sys
 

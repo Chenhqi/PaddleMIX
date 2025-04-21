@@ -143,6 +143,7 @@ else:
         "FluxImg2ImgPipeline",
         "FluxInpaintPipeline",
         "FluxPipeline",
+        "FluxTeaCachePipeline",
         "FluxFillPipeline",
         "FluxPriorReduxPipeline",
         "ReduxImageEncoder",
@@ -435,6 +436,7 @@ if TYPE_CHECKING or PPDIFFUSERS_SLOW_IMPORT:
             FluxInpaintPipeline,
             FluxPipeline,
             FluxPriorReduxPipeline,
+            FluxTeaCachePipeline,
             ReduxImageEncoder,
         )
         from .hunyuan_video import HunyuanVideoPipeline, HunyuanVideoPipelineOutput

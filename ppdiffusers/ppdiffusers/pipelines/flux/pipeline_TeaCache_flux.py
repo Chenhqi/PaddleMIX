@@ -34,7 +34,7 @@ from ...loaders import (  # FluxIPAdapterMixin, FluxLoraLoaderMixin
     TextualInversionLoaderMixin,
 )
 from ...models.autoencoder_kl import AutoencoderKL
-from ...models.transformer_flux import FluxTransformer2DModel
+from ...models.transformer_TeaCache_flux import FluxTeaCacheTransformer2DModel
 from ...schedulers import FlowMatchEulerDiscreteScheduler
 from ...utils import (
     logging,
@@ -143,7 +143,7 @@ def retrieve_timesteps(
 
 
 # FluxLoraLoaderMixin, FluxIPAdapterMixin
-class FluxPipeline(
+class FluxTeaCachePipeline(
     DiffusionPipeline,
     FromSingleFileMixin,
     TextualInversionLoaderMixin,
@@ -154,7 +154,7 @@ class FluxPipeline(
     Reference: https://blackforestlabs.ai/announcing-black-forest-labs/
 
     Args:
-        transformer ([`FluxTransformer2DModel`]):
+        transformer ([`FluxTeaCacheTransformer2DModel`]):
             Conditional Transformer (MMDiT) architecture to denoise the encoded image latents.
         scheduler ([`FlowMatchEulerDiscreteScheduler`]):
             A scheduler to be used in combination with `transformer` to denoise the encoded image latents.
@@ -186,7 +186,7 @@ class FluxPipeline(
         tokenizer: CLIPTokenizer,
         text_encoder_2: T5EncoderModel,
         tokenizer_2: T5Tokenizer,
-        transformer: FluxTransformer2DModel,
+        transformer: FluxTeaCacheTransformer2DModel,
         image_encoder: CLIPVisionModelWithProjection = None,
         feature_extractor: CLIPImageProcessor = None,
     ):
@@ -844,6 +844,7 @@ class FluxPipeline(
                 timestep = t.expand(latents.shape[0]).astype(latents.dtype)
 
                 noise_pred = self.transformer(
+                    self.transformer,
                     hidden_states=latents,
                     timestep=timestep / 1000,
                     guidance=guidance,

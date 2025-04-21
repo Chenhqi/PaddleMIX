@@ -67,6 +67,7 @@ if is_paddle_available():
     _import_structure["cogvideox_transformer_3d_vctrl"] = ["CogVideoXTransformer3DVCtrlModel"]
     _import_structure["transformer_hunyuan_video"] = ["HunyuanVideoTransformer3DModel"]
     _import_structure["transformer_flux"] = ["FluxTransformer2DModel"]
+    _import_structure["transformer_TeaCache_flux"] = ["FluxTeaCacheTransformer2DModel"]
 
 
 if TYPE_CHECKING or PPDIFFUSERS_SLOW_IMPORT:
@@ -105,6 +106,7 @@ if TYPE_CHECKING or PPDIFFUSERS_SLOW_IMPORT:
         from .transformer_flux import FluxTransformer2DModel
         from .transformer_hunyuan_video import HunyuanVideoTransformer3DModel
         from .transformer_sd3 import SD3Transformer2DModel
+        from .transformer_TeaCache_flux import FluxTeaCacheTransformer2DModel
         from .transformer_temporal import TransformerTemporalModel
         from .transformer_wan import WanTransformer3DModel
         from .unet_1d import UNet1DModel
