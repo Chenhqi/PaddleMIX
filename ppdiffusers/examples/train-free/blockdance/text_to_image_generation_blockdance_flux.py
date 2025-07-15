@@ -26,13 +26,13 @@ pipe.transformer.previous_block = None
 pipe.transformer.previous_block_encoder = None
 pipe.transformer.previous_single_block = None
 pipe.transformer.step_start = 100
-pipe.transformer.step_end = 900
-pipe.transformer.block_step_single = 28
-pipe.transformer.block_step = 13
-pipe.transformer.block_step_N = 4
+pipe.transformer.step_end = 950
+pipe.transformer.block_step_single = 30
+pipe.transformer.block_step = 15
+pipe.transformer.block_step_N = 8
 pipe.transformer.count = 0
 
-prompt = "An image of a squirrel in Picasso style"
+prompt = "Three stuffed bears hugging and sitting on a blue pillow."
 image = pipe(
     prompt,
     height=1024,
@@ -42,4 +42,4 @@ image = pipe(
     max_sequence_length=512,
     generator=paddle.Generator().manual_seed(42),
 ).images[0]
-image.save("text_to_image_generation-flux-dev-result.png")
+image.save("/root/paddlejob/workspace/env_run/chq/reslut/blockdance1.png")

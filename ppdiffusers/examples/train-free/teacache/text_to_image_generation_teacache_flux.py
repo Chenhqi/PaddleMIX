@@ -31,7 +31,7 @@ pipe.transformer.accumulated_rel_l1_distance = 0
 pipe.transformer.previous_modulated_input = None
 pipe.transformer.previous_residual = None
 
-prompt = "An image of a squirrel in Picasso style"
+prompt = "Three stuffed bears hugging and sitting on a blue pillow."
 image = pipe(
     prompt,
     height=1024,
@@ -41,4 +41,4 @@ image = pipe(
     max_sequence_length=512,
     generator=paddle.Generator().manual_seed(42),
 ).images[0]
-image.save("text_to_image_generation-flux-dev-result.png")
+image.save("/root/paddlejob/workspace/env_run/chq/reslut/teacache1.png")

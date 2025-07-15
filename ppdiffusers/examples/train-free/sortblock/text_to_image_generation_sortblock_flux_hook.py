@@ -24,12 +24,12 @@ pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", paddle_dtype
 # Configure SortBlock optimization
 config = SortBlockConfig(
     num_inference_steps=50,
-    timestep_start=900,
-    timestep_end=100,
+    timestep_start=950,
+    timestep_end=50,
     percentage=1.0,
     step_num=1,
     step_num2=5,
-    beta=0.3,
+    beta=0.1,
     current_timestep_callback=lambda: getattr(pipe, "_current_timestep", None),
 )
 

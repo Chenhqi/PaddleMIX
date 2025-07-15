@@ -466,7 +466,6 @@ class WanPipeline(DiffusionPipeline, WanLoraLoaderMixin):
             batch_size = len(prompt)
         else:
             batch_size = prompt_embeds.shape[0]
-
         # 3. Encode input prompt
         prompt_embeds, negative_prompt_embeds = self.encode_prompt(
             prompt=prompt,
@@ -501,6 +500,8 @@ class WanPipeline(DiffusionPipeline, WanLoraLoaderMixin):
             latents,
         )
 
+        if self._attention_kwargs is None:
+            self._attention_kwargs = {}
         # 6. Denoising loop
         num_warmup_steps = len(timesteps) - num_inference_steps * self.scheduler.order
         self._num_timesteps = len(timesteps)
@@ -518,7 +519,7 @@ class WanPipeline(DiffusionPipeline, WanLoraLoaderMixin):
                     hidden_states=latent_model_input,
                     timestep=timestep,
                     encoder_hidden_states=prompt_embeds,
-                    attention_kwargs=attention_kwargs,
+                    attention_kwargs=self._attention_kwargs,
                     return_dict=False,
                 )[0]
 
@@ -527,7 +528,7 @@ class WanPipeline(DiffusionPipeline, WanLoraLoaderMixin):
                         hidden_states=latent_model_input,
                         timestep=timestep,
                         encoder_hidden_states=negative_prompt_embeds,
-                        attention_kwargs=attention_kwargs,
+                        attention_kwargs=self._attention_kwargs,
                         return_dict=False,
                     )[0]
                     noise_pred = noise_uncond + guidance_scale * (noise_pred - noise_uncond)

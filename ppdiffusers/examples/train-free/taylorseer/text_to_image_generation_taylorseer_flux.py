@@ -26,7 +26,7 @@ logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
 
 num_inference_steps = 50
 seed = 42
-prompt = "An image of a squirrel in Picasso style"
+prompt = "Three stuffed bears hugging and sitting on a blue pillow."
 #
 pipeline = DiffusionPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", paddle_dtype=paddle.bfloat16)
 # pipeline.enable_model_cpu_offload() #save some VRAM by offloading the model to CPU. Remove this if you have enough GPU power
@@ -60,7 +60,7 @@ for i in range(2):
     elapsed_time = start.elapsed_time(end) * 1e-3
     peak_memory = paddle.device.cuda.max_memory_allocated()
 
-    img.save("{}.png".format("taylorseer_" + prompt))
+    img.save("/root/paddlejob/workspace/env_run/chq/reslut/taylorseer1.png")
 
     print(
         f"epoch time: {elapsed_time:.2f} sec, parameter memory: {parameter_peak_memory/1e9:.2f} GB, memory: {peak_memory/1e9:.2f} GB"

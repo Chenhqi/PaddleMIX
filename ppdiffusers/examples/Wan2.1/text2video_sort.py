@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import paddle
+from forwards import SortBlock_forward
 
 from ppdiffusers import AutoencoderKLWan, WanPipeline
 from ppdiffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
@@ -28,6 +29,18 @@ scheduler = UniPCMultistepScheduler(
     prediction_type="flow_prediction", use_flow_sigmas=True, num_train_timesteps=1000, flow_shift=flow_shift
 )
 pipe.scheduler = scheduler
+pipe.transformer.__class__.forward = SortBlock_forward
+
+pipe.transformer.current_single_block_residual = [None] * len(pipe.transformer.blocks)
+pipe.transformer.previous_single_block_residual = [None] * len(pipe.transformer.blocks)
+pipe.transformer.result_single_list = []
+pipe.transformer.start = 900
+pipe.transformer.end = 50
+pipe.transformer.precentage = 1
+pipe.transformer.step_Num = 1
+pipe.transformer.step_Num2 = 1
+pipe.transformer.beta = 1
+pipe.transformer.count = 0
 
 prompt = "A cat and a dog baking a cake together in a kitchen. The cat is carefully measuring flour, while the dog is stirring the batter with a wooden spoon. The kitchen is cozy, with sunlight streaming through the window."
 negative_prompt = "Bright tones, overexposed, static, blurred details, subtitles, style, works, paintings, images, static, overall gray, worst quality, low quality, JPEG compression residue, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn faces, deformed, disfigured, misshapen limbs, fused fingers, still picture, messy background, three legs, many people in the background, walking backwards"
@@ -39,6 +52,7 @@ output = pipe(
     width=832,
     num_frames=81,
     guidance_scale=5.0,
+    generator=paddle.Generator().manual_seed(42),
 ).frames[0]
 
 export_to_video_2(output, "output.mp4", fps=16)
