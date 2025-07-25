@@ -42,12 +42,12 @@ pipeline.transformer.previous_single_block_residual = [None] * len(pipeline.tran
 pipeline.transformer.previous_encoder_block_residual = [None] * len(pipeline.transformer.single_transformer_blocks)
 pipeline.transformer.result_list = []
 pipeline.transformer.result_single_list = []
-pipeline.transformer.start = 970
+pipeline.transformer.start = 1000
 pipeline.transformer.end = 50
 pipeline.transformer.precentage = 1
 pipeline.transformer.step_Num = 1
-pipeline.transformer.step_Num2 = 1
-pipeline.transformer.beta = 1
+pipeline.transformer.step_Num2 = 7
+pipeline.transformer.beta = 0.1
 pipeline.transformer.count = 0
 
 
@@ -68,7 +68,7 @@ elapsed_time = end_time - start_time
 print(f"Elapsed time: {elapsed_time:.2f} seconds")
 ####
 start_time = time.time()
-prompt = "A image of a dog in Picasso style."
+prompt = "An image of a squirrel in Picasso style."
 image = pipeline(
     prompt,
     height=1024,

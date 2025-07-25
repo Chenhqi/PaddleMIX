@@ -348,8 +348,8 @@ if __name__ == "__main__":
                 total_time += end_time - start_time
                 export_to_video_2(output, os.path.join(saved_path, f"{prompt[0][0]}-{l}.mp4"), fps=16)
             # print(f"Elapsed time: {elapsed_time:.2f} seconds")
-        average_time = total_time / (len(all_prompts) * 2)
-        print(f"Average time per image generation: {average_time:.2f} seconds")
+        # average_time = total_time / (len(all_prompts) * 2)
+        # print(f"Average time per image generation: {average_time:.2f} seconds")
     if args.wan_teacache == True:
         from forwards import Teacache_forward
 

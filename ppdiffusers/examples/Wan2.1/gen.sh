@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-python -m paddle.distributed.launch --gpus=0,3  --log_dir logs5 generation_teacache.py \
+python -m paddle.distributed.launch --gpus=1,2,3  --log_dir logs5 generation_teacache.py \
 --origin_wan
 

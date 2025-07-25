@@ -467,10 +467,8 @@ class WanTransformer3DModel(ModelMixin, ConfigMixin):
                     block, hidden_states, encoder_hidden_states, timestep_proj, rotary_emb
                 )
         else:
-            for block in self.blocks:
-                hidden_states = block(hidden_states, encoder_hidden_states, timestep_proj, rotary_emb)
-
-        # 5. Output norm, projection & unpatchify
+            for index_block, block in enumerate(self.blocks):
+                hidden_states = block(hidden_states, encoder_hidden_states, timestep_proj, rotary_emb)        # 5. Output norm, projection & unpatchify
         shift, scale = (self.scale_shift_table + temb.unsqueeze(1)).chunk(2, axis=1)
         hidden_states = (self.norm_out(hidden_states.cast(paddle.float32)) * (1 + scale) + shift).cast(
             hidden_states.dtype

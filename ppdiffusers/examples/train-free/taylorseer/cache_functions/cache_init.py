@@ -35,7 +35,7 @@ def cache_init(self: FluxTransformer2DModel):
     cache_dic["cache_counter"] = 0
 
     # for j in range(19):
-    for j in range(self.config.num_layers):
+    for j in range(len(self.transformer_blocks)):
         cache[-1]["double_stream"][j] = {}
         cache_index[-1][j] = {}
         cache_dic["attn_map"][-1]["double_stream"][j] = {}
@@ -44,7 +44,7 @@ def cache_init(self: FluxTransformer2DModel):
         cache_dic["attn_map"][-1]["double_stream"][j]["img_mlp"] = {}
 
     # for j in range(38):
-    for j in range(self.config.num_single_layers):
+    for j in range(len(self.single_transformer_blocks)):
         cache[-1]["single_stream"][j] = {}
         cache_index[-1][j] = {}
         cache_dic["attn_map"][-1]["single_stream"][j] = {}

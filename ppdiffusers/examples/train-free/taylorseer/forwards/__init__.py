@@ -14,5 +14,6 @@
 
 from .double_transformer_forward import taylorseer_flux_double_block_forward
 from .flux_forward import taylorseer_flux_forward
+from .hunyuan_forward import taylorseer_hunyuan_forward
 from .single_transformer_forward import taylorseer_flux_single_block_forward
 from .xfuser_flux_forward import taylorseer_xfuser_flux_forward

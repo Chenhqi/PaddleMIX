@@ -14,25 +14,30 @@
 
 import paddle
 from taylorseer_utils import derivative_approximation, taylor_cache_init, taylor_formula
-
+from typing import Any, Dict, List, Optional, Tuple, Union
 from ppdiffusers.models.transformer_flux import FluxSingleTransformerBlock
 
 
 def taylorseer_flux_single_block_forward(
-    self: FluxSingleTransformerBlock,
+    self,
     hidden_states: paddle.Tensor,
+    encoder_hidden_states: paddle.Tensor,
     temb: paddle.Tensor,
-    image_rotary_emb=None,
-    joint_attention_kwargs=None,
+    attention_mask: Optional[paddle.Tensor] = None,
+    image_rotary_emb: Optional[Tuple[paddle.Tensor, paddle.Tensor]] = None,
+    joint_attention_kwargs=None
 ):
+    text_seq_length = tuple(encoder_hidden_states.shape)[1]
+    hidden_states = paddle.concat(x=[hidden_states, encoder_hidden_states], axis=1)
+
+    residual = hidden_states
+
     joint_attention_kwargs = joint_attention_kwargs or {}
     cache_dic = joint_attention_kwargs["cache_dic"]
     current = joint_attention_kwargs["current"]
 
-    norm_hidden_states, gate = self.norm(hidden_states, emb=temb)
-    gate = gate.unsqueeze(1)
 
-    residual = hidden_states
+    norm_hidden_states, gate = self.norm(hidden_states, emb=temb)
 
     if current["type"] == "full":
 
@@ -41,13 +46,20 @@ def taylorseer_flux_single_block_forward(
 
         mlp_hidden_states = self.act_mlp(self.proj_mlp(norm_hidden_states))
 
-        attn_output = self.attn(
-            hidden_states=norm_hidden_states,
-            image_rotary_emb=image_rotary_emb,
-            # **joint_attention_kwargs,
+        norm_hidden_states, norm_encoder_hidden_states = (
+            norm_hidden_states[:, :-text_seq_length, :],
+            norm_hidden_states[:, -text_seq_length:, :],
         )
 
-        hidden_states = paddle.concat([attn_output, mlp_hidden_states], axis=2)
+        attn_output, context_attn_output = self.attn(
+            hidden_states=norm_hidden_states,
+            encoder_hidden_states=norm_encoder_hidden_states,
+            attention_mask=attention_mask,
+            image_rotary_emb=image_rotary_emb,
+        )
+        attn_output = paddle.concat(x=[attn_output, context_attn_output], axis=1)
+
+        hidden_states = paddle.concat(x=[attn_output, mlp_hidden_states], axis=2)
 
         hidden_states = self.proj_out(hidden_states)
         derivative_approximation(cache_dic=cache_dic, current=current, feature=hidden_states)
@@ -57,10 +69,12 @@ def taylorseer_flux_single_block_forward(
         current["module"] = "total"
         hidden_states = taylor_formula(cache_dic=cache_dic, current=current)
 
-    hidden_states = gate * hidden_states
+    hidden_states = gate.unsqueeze(axis=1) * hidden_states
     hidden_states = residual + hidden_states
 
-    if hidden_states.dtype == paddle.float16:
-        hidden_states = hidden_states.clip(-65504, 65504)
+    hidden_states, encoder_hidden_states = (
+            hidden_states[:, :-text_seq_length, :],
+            hidden_states[:, -text_seq_length:, :],
+        )
 
-    return hidden_states
+    return hidden_states, encoder_hidden_states

@@ -1,0 +1,1023 @@
+/root/paddlejob/workspace/guoyilong/miniconda3/envs/chq/lib/python3.11/site-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+W0722 15:42:19.292261 187551 gpu_resources.cc:114] Please NOTE: device: 3, GPU Compute Capability: 9.0, Driver API Version: 12.2, Runtime API Version: 12.8
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 3/3 [00:00<00:00, 27962.03it/s]
+The config attributes {'Name': ['HunyuanVideo']} were passed to HunyuanVideoTransformer3DModel, but are not expected and will be ignored. Please verify your config.json configuration file.
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:10<00:20, 10.19s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:20<00:10, 10.29s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  8.23s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  8.78s/it]
+Some weights of the model checkpoint at hunyuanvideo-community/HunyuanVideo were not used when initializing HunyuanVideoTransformer3DModel: ['norm_out.norm.bias']
+- This IS expected if you are initializing HunyuanVideoTransformer3DModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing HunyuanVideoTransformer3DModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[32m[2025-07-22 15:42:47,544] [    INFO][0m - Loading configuration file /root/.paddlenlp/models/hunyuanvideo-community/HunyuanVideo/text_encoder/config.json[0m
+[32m[2025-07-22 15:42:47,545] [    INFO][0m - Loading weights file from cache at /root/.paddlenlp/models/hunyuanvideo-community/HunyuanVideo/text_encoder/model_state.pdparams.index.json[0m
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 2/2 [00:00<00:00, 35394.97it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:14<00:14, 14.09s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:21<00:00, 10.05s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:21<00:00, 10.65s/it]
+[32m[2025-07-22 15:43:09,453] [    INFO][0m - All model checkpoint weights were used when initializing LlamaModel.
+[0m
+[32m[2025-07-22 15:43:09,454] [    INFO][0m - All the weights of LlamaModel were initialized from the model checkpoint at hunyuanvideo-community/HunyuanVideo.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaModel for predictions without further training.[0m
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s][32m[2025-07-22 15:43:09,458] [    INFO][0m - Loading configuration file /root/.cache/paddlenlp/ppdiffusers/hunyuanvideo-community/HunyuanVideo/text_encoder_2/config.json[0m
+[32m[2025-07-22 15:43:09,459] [    INFO][0m - Loading weights file from cache at /root/.cache/paddlenlp/ppdiffusers/hunyuanvideo-community/HunyuanVideo/text_encoder_2/model_state.pdparams[0m
+[32m[2025-07-22 15:43:10,695] [    INFO][0m - Loaded weights file from disk, setting weights to model.[0m
+[33m[2025-07-22 15:43:10,754] [ WARNING][0m - Loading from deprecated state_dict, please load new state_dict via setting `use_safetensors=True`.[0m
+[33m[2025-07-22 15:43:11,082] [ WARNING][0m - Some weights of the model checkpoint at hunyuanvideo-community/HunyuanVideo were not used when initializing CLIPTextModel: ['logit_scale', 'text_projection.weight', 'vision_model.embeddings.class_embedding', 'vision_model.embeddings.patch_embedding.weight', 'vision_model.embeddings.position_embedding.weight', 'vision_model.encoder.layers.0.layer_norm1.bias', 'vision_model.encoder.layers.0.layer_norm1.weight', 'vision_model.encoder.layers.0.layer_norm2.bias', 'vision_model.encoder.layers.0.layer_norm2.weight', 'vision_model.encoder.layers.0.mlp.fc1.bias', 'vision_model.encoder.layers.0.mlp.fc1.weight', 'vision_model.encoder.layers.0.mlp.fc2.bias', 'vision_model.encoder.layers.0.mlp.fc2.weight', 'vision_model.encoder.layers.0.self_attn.k_proj.bias', 'vision_model.encoder.layers.0.self_attn.k_proj.weight', 'vision_model.encoder.layers.0.self_attn.out_proj.bias', 'vision_model.encoder.layers.0.self_attn.out_proj.weight', 'vision_model.encoder.layers.0.self_attn.q_proj.bias', 'vision_model.encoder.layers.0.self_attn.q_proj.weight', 'vision_model.encoder.layers.0.self_attn.v_proj.bias', 'vision_model.encoder.layers.0.self_attn.v_proj.weight', 'vision_model.encoder.layers.1.layer_norm1.bias', 'vision_model.encoder.layers.1.layer_norm1.weight', 'vision_model.encoder.layers.1.layer_norm2.bias', 'vision_model.encoder.layers.1.layer_norm2.weight', 'vision_model.encoder.layers.1.mlp.fc1.bias', 'vision_model.encoder.layers.1.mlp.fc1.weight', 'vision_model.encoder.layers.1.mlp.fc2.bias', 'vision_model.encoder.layers.1.mlp.fc2.weight', 'vision_model.encoder.layers.1.self_attn.k_proj.bias', 'vision_model.encoder.layers.1.self_attn.k_proj.weight', 'vision_model.encoder.layers.1.self_attn.out_proj.bias', 'vision_model.encoder.layers.1.self_attn.out_proj.weight', 'vision_model.encoder.layers.1.self_attn.q_proj.bias', 'vision_model.encoder.layers.1.self_attn.q_proj.weight', 'vision_model.encoder.layers.1.self_attn.v_proj.bias', 'vision_model.encoder.layers.1.self_attn.v_proj.weight', 'vision_model.encoder.layers.10.layer_norm1.bias', 'vision_model.encoder.layers.10.layer_norm1.weight', 'vision_model.encoder.layers.10.layer_norm2.bias', 'vision_model.encoder.layers.10.layer_norm2.weight', 'vision_model.encoder.layers.10.mlp.fc1.bias', 'vision_model.encoder.layers.10.mlp.fc1.weight', 'vision_model.encoder.layers.10.mlp.fc2.bias', 'vision_model.encoder.layers.10.mlp.fc2.weight', 'vision_model.encoder.layers.10.self_attn.k_proj.bias', 'vision_model.encoder.layers.10.self_attn.k_proj.weight', 'vision_model.encoder.layers.10.self_attn.out_proj.bias', 'vision_model.encoder.layers.10.self_attn.out_proj.weight', 'vision_model.encoder.layers.10.self_attn.q_proj.bias', 'vision_model.encoder.layers.10.self_attn.q_proj.weight', 'vision_model.encoder.layers.10.self_attn.v_proj.bias', 'vision_model.encoder.layers.10.self_attn.v_proj.weight', 'vision_model.encoder.layers.11.layer_norm1.bias', 'vision_model.encoder.layers.11.layer_norm1.weight', 'vision_model.encoder.layers.11.layer_norm2.bias', 'vision_model.encoder.layers.11.layer_norm2.weight', 'vision_model.encoder.layers.11.mlp.fc1.bias', 'vision_model.encoder.layers.11.mlp.fc1.weight', 'vision_model.encoder.layers.11.mlp.fc2.bias', 'vision_model.encoder.layers.11.mlp.fc2.weight', 'vision_model.encoder.layers.11.self_attn.k_proj.bias', 'vision_model.encoder.layers.11.self_attn.k_proj.weight', 'vision_model.encoder.layers.11.self_attn.out_proj.bias', 'vision_model.encoder.layers.11.self_attn.out_proj.weight', 'vision_model.encoder.layers.11.self_attn.q_proj.bias', 'vision_model.encoder.layers.11.self_attn.q_proj.weight', 'vision_model.encoder.layers.11.self_attn.v_proj.bias', 'vision_model.encoder.layers.11.self_attn.v_proj.weight', 'vision_model.encoder.layers.12.layer_norm1.bias', 'vision_model.encoder.layers.12.layer_norm1.weight', 'vision_model.encoder.layers.12.layer_norm2.bias', 'vision_model.encoder.layers.12.layer_norm2.weight', 'vision_model.encoder.layers.12.mlp.fc1.bias', 'vision_model.encoder.layers.12.mlp.fc1.weight', 'vision_model.encoder.layers.12.mlp.fc2.bias', 'vision_model.encoder.layers.12.mlp.fc2.weight', 'vision_model.encoder.layers.12.self_attn.k_proj.bias', 'vision_model.encoder.layers.12.self_attn.k_proj.weight', 'vision_model.encoder.layers.12.self_attn.out_proj.bias', 'vision_model.encoder.layers.12.self_attn.out_proj.weight', 'vision_model.encoder.layers.12.self_attn.q_proj.bias', 'vision_model.encoder.layers.12.self_attn.q_proj.weight', 'vision_model.encoder.layers.12.self_attn.v_proj.bias', 'vision_model.encoder.layers.12.self_attn.v_proj.weight', 'vision_model.encoder.layers.13.layer_norm1.bias', 'vision_model.encoder.layers.13.layer_norm1.weight', 'vision_model.encoder.layers.13.layer_norm2.bias', 'vision_model.encoder.layers.13.layer_norm2.weight', 'vision_model.encoder.layers.13.mlp.fc1.bias', 'vision_model.encoder.layers.13.mlp.fc1.weight', 'vision_model.encoder.layers.13.mlp.fc2.bias', 'vision_model.encoder.layers.13.mlp.fc2.weight', 'vision_model.encoder.layers.13.self_attn.k_proj.bias', 'vision_model.encoder.layers.13.self_attn.k_proj.weight', 'vision_model.encoder.layers.13.self_attn.out_proj.bias', 'vision_model.encoder.layers.13.self_attn.out_proj.weight', 'vision_model.encoder.layers.13.self_attn.q_proj.bias', 'vision_model.encoder.layers.13.self_attn.q_proj.weight', 'vision_model.encoder.layers.13.self_attn.v_proj.bias', 'vision_model.encoder.layers.13.self_attn.v_proj.weight', 'vision_model.encoder.layers.14.layer_norm1.bias', 'vision_model.encoder.layers.14.layer_norm1.weight', 'vision_model.encoder.layers.14.layer_norm2.bias', 'vision_model.encoder.layers.14.layer_norm2.weight', 'vision_model.encoder.layers.14.mlp.fc1.bias', 'vision_model.encoder.layers.14.mlp.fc1.weight', 'vision_model.encoder.layers.14.mlp.fc2.bias', 'vision_model.encoder.layers.14.mlp.fc2.weight', 'vision_model.encoder.layers.14.self_attn.k_proj.bias', 'vision_model.encoder.layers.14.self_attn.k_proj.weight', 'vision_model.encoder.layers.14.self_attn.out_proj.bias', 'vision_model.encoder.layers.14.self_attn.out_proj.weight', 'vision_model.encoder.layers.14.self_attn.q_proj.bias', 'vision_model.encoder.layers.14.self_attn.q_proj.weight', 'vision_model.encoder.layers.14.self_attn.v_proj.bias', 'vision_model.encoder.layers.14.self_attn.v_proj.weight', 'vision_model.encoder.layers.15.layer_norm1.bias', 'vision_model.encoder.layers.15.layer_norm1.weight', 'vision_model.encoder.layers.15.layer_norm2.bias', 'vision_model.encoder.layers.15.layer_norm2.weight', 'vision_model.encoder.layers.15.mlp.fc1.bias', 'vision_model.encoder.layers.15.mlp.fc1.weight', 'vision_model.encoder.layers.15.mlp.fc2.bias', 'vision_model.encoder.layers.15.mlp.fc2.weight', 'vision_model.encoder.layers.15.self_attn.k_proj.bias', 'vision_model.encoder.layers.15.self_attn.k_proj.weight', 'vision_model.encoder.layers.15.self_attn.out_proj.bias', 'vision_model.encoder.layers.15.self_attn.out_proj.weight', 'vision_model.encoder.layers.15.self_attn.q_proj.bias', 'vision_model.encoder.layers.15.self_attn.q_proj.weight', 'vision_model.encoder.layers.15.self_attn.v_proj.bias', 'vision_model.encoder.layers.15.self_attn.v_proj.weight', 'vision_model.encoder.layers.16.layer_norm1.bias', 'vision_model.encoder.layers.16.layer_norm1.weight', 'vision_model.encoder.layers.16.layer_norm2.bias', 'vision_model.encoder.layers.16.layer_norm2.weight', 'vision_model.encoder.layers.16.mlp.fc1.bias', 'vision_model.encoder.layers.16.mlp.fc1.weight', 'vision_model.encoder.layers.16.mlp.fc2.bias', 'vision_model.encoder.layers.16.mlp.fc2.weight', 'vision_model.encoder.layers.16.self_attn.k_proj.bias', 'vision_model.encoder.layers.16.self_attn.k_proj.weight', 'vision_model.encoder.layers.16.self_attn.out_proj.bias', 'vision_model.encoder.layers.16.self_attn.out_proj.weight', 'vision_model.encoder.layers.16.self_attn.q_proj.bias', 'vision_model.encoder.layers.16.self_attn.q_proj.weight', 'vision_model.encoder.layers.16.self_attn.v_proj.bias', 'vision_model.encoder.layers.16.self_attn.v_proj.weight', 'vision_model.encoder.layers.17.layer_norm1.bias', 'vision_model.encoder.layers.17.layer_norm1.weight', 'vision_model.encoder.layers.17.layer_norm2.bias', 'vision_model.encoder.layers.17.layer_norm2.weight', 'vision_model.encoder.layers.17.mlp.fc1.bias', 'vision_model.encoder.layers.17.mlp.fc1.weight', 'vision_model.encoder.layers.17.mlp.fc2.bias', 'vision_model.encoder.layers.17.mlp.fc2.weight', 'vision_model.encoder.layers.17.self_attn.k_proj.bias', 'vision_model.encoder.layers.17.self_attn.k_proj.weight', 'vision_model.encoder.layers.17.self_attn.out_proj.bias', 'vision_model.encoder.layers.17.self_attn.out_proj.weight', 'vision_model.encoder.layers.17.self_attn.q_proj.bias', 'vision_model.encoder.layers.17.self_attn.q_proj.weight', 'vision_model.encoder.layers.17.self_attn.v_proj.bias', 'vision_model.encoder.layers.17.self_attn.v_proj.weight', 'vision_model.encoder.layers.18.layer_norm1.bias', 'vision_model.encoder.layers.18.layer_norm1.weight', 'vision_model.encoder.layers.18.layer_norm2.bias', 'vision_model.encoder.layers.18.layer_norm2.weight', 'vision_model.encoder.layers.18.mlp.fc1.bias', 'vision_model.encoder.layers.18.mlp.fc1.weight', 'vision_model.encoder.layers.18.mlp.fc2.bias', 'vision_model.encoder.layers.18.mlp.fc2.weight', 'vision_model.encoder.layers.18.self_attn.k_proj.bias', 'vision_model.encoder.layers.18.self_attn.k_proj.weight', 'vision_model.encoder.layers.18.self_attn.out_proj.bias', 'vision_model.encoder.layers.18.self_attn.out_proj.weight', 'vision_model.encoder.layers.18.self_attn.q_proj.bias', 'vision_model.encoder.layers.18.self_attn.q_proj.weight', 'vision_model.encoder.layers.18.self_attn.v_proj.bias', 'vision_model.encoder.layers.18.self_attn.v_proj.weight', 'vision_model.encoder.layers.19.layer_norm1.bias', 'vision_model.encoder.layers.19.layer_norm1.weight', 'vision_model.encoder.layers.19.layer_norm2.bias', 'vision_model.encoder.layers.19.layer_norm2.weight', 'vision_model.encoder.layers.19.mlp.fc1.bias', 'vision_model.encoder.layers.19.mlp.fc1.weight', 'vision_model.encoder.layers.19.mlp.fc2.bias', 'vision_model.encoder.layers.19.mlp.fc2.weight', 'vision_model.encoder.layers.19.self_attn.k_proj.bias', 'vision_model.encoder.layers.19.self_attn.k_proj.weight', 'vision_model.encoder.layers.19.self_attn.out_proj.bias', 'vision_model.encoder.layers.19.self_attn.out_proj.weight', 'vision_model.encoder.layers.19.self_attn.q_proj.bias', 'vision_model.encoder.layers.19.self_attn.q_proj.weight', 'vision_model.encoder.layers.19.self_attn.v_proj.bias', 'vision_model.encoder.layers.19.self_attn.v_proj.weight', 'vision_model.encoder.layers.2.layer_norm1.bias', 'vision_model.encoder.layers.2.layer_norm1.weight', 'vision_model.encoder.layers.2.layer_norm2.bias', 'vision_model.encoder.layers.2.layer_norm2.weight', 'vision_model.encoder.layers.2.mlp.fc1.bias', 'vision_model.encoder.layers.2.mlp.fc1.weight', 'vision_model.encoder.layers.2.mlp.fc2.bias', 'vision_model.encoder.layers.2.mlp.fc2.weight', 'vision_model.encoder.layers.2.self_attn.k_proj.bias', 'vision_model.encoder.layers.2.self_attn.k_proj.weight', 'vision_model.encoder.layers.2.self_attn.out_proj.bias', 'vision_model.encoder.layers.2.self_attn.out_proj.weight', 'vision_model.encoder.layers.2.self_attn.q_proj.bias', 'vision_model.encoder.layers.2.self_attn.q_proj.weight', 'vision_model.encoder.layers.2.self_attn.v_proj.bias', 'vision_model.encoder.layers.2.self_attn.v_proj.weight', 'vision_model.encoder.layers.20.layer_norm1.bias', 'vision_model.encoder.layers.20.layer_norm1.weight', 'vision_model.encoder.layers.20.layer_norm2.bias', 'vision_model.encoder.layers.20.layer_norm2.weight', 'vision_model.encoder.layers.20.mlp.fc1.bias', 'vision_model.encoder.layers.20.mlp.fc1.weight', 'vision_model.encoder.layers.20.mlp.fc2.bias', 'vision_model.encoder.layers.20.mlp.fc2.weight', 'vision_model.encoder.layers.20.self_attn.k_proj.bias', 'vision_model.encoder.layers.20.self_attn.k_proj.weight', 'vision_model.encoder.layers.20.self_attn.out_proj.bias', 'vision_model.encoder.layers.20.self_attn.out_proj.weight', 'vision_model.encoder.layers.20.self_attn.q_proj.bias', 'vision_model.encoder.layers.20.self_attn.q_proj.weight', 'vision_model.encoder.layers.20.self_attn.v_proj.bias', 'vision_model.encoder.layers.20.self_attn.v_proj.weight', 'vision_model.encoder.layers.21.layer_norm1.bias', 'vision_model.encoder.layers.21.layer_norm1.weight', 'vision_model.encoder.layers.21.layer_norm2.bias', 'vision_model.encoder.layers.21.layer_norm2.weight', 'vision_model.encoder.layers.21.mlp.fc1.bias', 'vision_model.encoder.layers.21.mlp.fc1.weight', 'vision_model.encoder.layers.21.mlp.fc2.bias', 'vision_model.encoder.layers.21.mlp.fc2.weight', 'vision_model.encoder.layers.21.self_attn.k_proj.bias', 'vision_model.encoder.layers.21.self_attn.k_proj.weight', 'vision_model.encoder.layers.21.self_attn.out_proj.bias', 'vision_model.encoder.layers.21.self_attn.out_proj.weight', 'vision_model.encoder.layers.21.self_attn.q_proj.bias', 'vision_model.encoder.layers.21.self_attn.q_proj.weight', 'vision_model.encoder.layers.21.self_attn.v_proj.bias', 'vision_model.encoder.layers.21.self_attn.v_proj.weight', 'vision_model.encoder.layers.22.layer_norm1.bias', 'vision_model.encoder.layers.22.layer_norm1.weight', 'vision_model.encoder.layers.22.layer_norm2.bias', 'vision_model.encoder.layers.22.layer_norm2.weight', 'vision_model.encoder.layers.22.mlp.fc1.bias', 'vision_model.encoder.layers.22.mlp.fc1.weight', 'vision_model.encoder.layers.22.mlp.fc2.bias', 'vision_model.encoder.layers.22.mlp.fc2.weight', 'vision_model.encoder.layers.22.self_attn.k_proj.bias', 'vision_model.encoder.layers.22.self_attn.k_proj.weight', 'vision_model.encoder.layers.22.self_attn.out_proj.bias', 'vision_model.encoder.layers.22.self_attn.out_proj.weight', 'vision_model.encoder.layers.22.self_attn.q_proj.bias', 'vision_model.encoder.layers.22.self_attn.q_proj.weight', 'vision_model.encoder.layers.22.self_attn.v_proj.bias', 'vision_model.encoder.layers.22.self_attn.v_proj.weight', 'vision_model.encoder.layers.23.layer_norm1.bias', 'vision_model.encoder.layers.23.layer_norm1.weight', 'vision_model.encoder.layers.23.layer_norm2.bias', 'vision_model.encoder.layers.23.layer_norm2.weight', 'vision_model.encoder.layers.23.mlp.fc1.bias', 'vision_model.encoder.layers.23.mlp.fc1.weight', 'vision_model.encoder.layers.23.mlp.fc2.bias', 'vision_model.encoder.layers.23.mlp.fc2.weight', 'vision_model.encoder.layers.23.self_attn.k_proj.bias', 'vision_model.encoder.layers.23.self_attn.k_proj.weight', 'vision_model.encoder.layers.23.self_attn.out_proj.bias', 'vision_model.encoder.layers.23.self_attn.out_proj.weight', 'vision_model.encoder.layers.23.self_attn.q_proj.bias', 'vision_model.encoder.layers.23.self_attn.q_proj.weight', 'vision_model.encoder.layers.23.self_attn.v_proj.bias', 'vision_model.encoder.layers.23.self_attn.v_proj.weight', 'vision_model.encoder.layers.3.layer_norm1.bias', 'vision_model.encoder.layers.3.layer_norm1.weight', 'vision_model.encoder.layers.3.layer_norm2.bias', 'vision_model.encoder.layers.3.layer_norm2.weight', 'vision_model.encoder.layers.3.mlp.fc1.bias', 'vision_model.encoder.layers.3.mlp.fc1.weight', 'vision_model.encoder.layers.3.mlp.fc2.bias', 'vision_model.encoder.layers.3.mlp.fc2.weight', 'vision_model.encoder.layers.3.self_attn.k_proj.bias', 'vision_model.encoder.layers.3.self_attn.k_proj.weight', 'vision_model.encoder.layers.3.self_attn.out_proj.bias', 'vision_model.encoder.layers.3.self_attn.out_proj.weight', 'vision_model.encoder.layers.3.self_attn.q_proj.bias', 'vision_model.encoder.layers.3.self_attn.q_proj.weight', 'vision_model.encoder.layers.3.self_attn.v_proj.bias', 'vision_model.encoder.layers.3.self_attn.v_proj.weight', 'vision_model.encoder.layers.4.layer_norm1.bias', 'vision_model.encoder.layers.4.layer_norm1.weight', 'vision_model.encoder.layers.4.layer_norm2.bias', 'vision_model.encoder.layers.4.layer_norm2.weight', 'vision_model.encoder.layers.4.mlp.fc1.bias', 'vision_model.encoder.layers.4.mlp.fc1.weight', 'vision_model.encoder.layers.4.mlp.fc2.bias', 'vision_model.encoder.layers.4.mlp.fc2.weight', 'vision_model.encoder.layers.4.self_attn.k_proj.bias', 'vision_model.encoder.layers.4.self_attn.k_proj.weight', 'vision_model.encoder.layers.4.self_attn.out_proj.bias', 'vision_model.encoder.layers.4.self_attn.out_proj.weight', 'vision_model.encoder.layers.4.self_attn.q_proj.bias', 'vision_model.encoder.layers.4.self_attn.q_proj.weight', 'vision_model.encoder.layers.4.self_attn.v_proj.bias', 'vision_model.encoder.layers.4.self_attn.v_proj.weight', 'vision_model.encoder.layers.5.layer_norm1.bias', 'vision_model.encoder.layers.5.layer_norm1.weight', 'vision_model.encoder.layers.5.layer_norm2.bias', 'vision_model.encoder.layers.5.layer_norm2.weight', 'vision_model.encoder.layers.5.mlp.fc1.bias', 'vision_model.encoder.layers.5.mlp.fc1.weight', 'vision_model.encoder.layers.5.mlp.fc2.bias', 'vision_model.encoder.layers.5.mlp.fc2.weight', 'vision_model.encoder.layers.5.self_attn.k_proj.bias', 'vision_model.encoder.layers.5.self_attn.k_proj.weight', 'vision_model.encoder.layers.5.self_attn.out_proj.bias', 'vision_model.encoder.layers.5.self_attn.out_proj.weight', 'vision_model.encoder.layers.5.self_attn.q_proj.bias', 'vision_model.encoder.layers.5.self_attn.q_proj.weight', 'vision_model.encoder.layers.5.self_attn.v_proj.bias', 'vision_model.encoder.layers.5.self_attn.v_proj.weight', 'vision_model.encoder.layers.6.layer_norm1.bias', 'vision_model.encoder.layers.6.layer_norm1.weight', 'vision_model.encoder.layers.6.layer_norm2.bias', 'vision_model.encoder.layers.6.layer_norm2.weight', 'vision_model.encoder.layers.6.mlp.fc1.bias', 'vision_model.encoder.layers.6.mlp.fc1.weight', 'vision_model.encoder.layers.6.mlp.fc2.bias', 'vision_model.encoder.layers.6.mlp.fc2.weight', 'vision_model.encoder.layers.6.self_attn.k_proj.bias', 'vision_model.encoder.layers.6.self_attn.k_proj.weight', 'vision_model.encoder.layers.6.self_attn.out_proj.bias', 'vision_model.encoder.layers.6.self_attn.out_proj.weight', 'vision_model.encoder.layers.6.self_attn.q_proj.bias', 'vision_model.encoder.layers.6.self_attn.q_proj.weight', 'vision_model.encoder.layers.6.self_attn.v_proj.bias', 'vision_model.encoder.layers.6.self_attn.v_proj.weight', 'vision_model.encoder.layers.7.layer_norm1.bias', 'vision_model.encoder.layers.7.layer_norm1.weight', 'vision_model.encoder.layers.7.layer_norm2.bias', 'vision_model.encoder.layers.7.layer_norm2.weight', 'vision_model.encoder.layers.7.mlp.fc1.bias', 'vision_model.encoder.layers.7.mlp.fc1.weight', 'vision_model.encoder.layers.7.mlp.fc2.bias', 'vision_model.encoder.layers.7.mlp.fc2.weight', 'vision_model.encoder.layers.7.self_attn.k_proj.bias', 'vision_model.encoder.layers.7.self_attn.k_proj.weight', 'vision_model.encoder.layers.7.self_attn.out_proj.bias', 'vision_model.encoder.layers.7.self_attn.out_proj.weight', 'vision_model.encoder.layers.7.self_attn.q_proj.bias', 'vision_model.encoder.layers.7.self_attn.q_proj.weight', 'vision_model.encoder.layers.7.self_attn.v_proj.bias', 'vision_model.encoder.layers.7.self_attn.v_proj.weight', 'vision_model.encoder.layers.8.layer_norm1.bias', 'vision_model.encoder.layers.8.layer_norm1.weight', 'vision_model.encoder.layers.8.layer_norm2.bias', 'vision_model.encoder.layers.8.layer_norm2.weight', 'vision_model.encoder.layers.8.mlp.fc1.bias', 'vision_model.encoder.layers.8.mlp.fc1.weight', 'vision_model.encoder.layers.8.mlp.fc2.bias', 'vision_model.encoder.layers.8.mlp.fc2.weight', 'vision_model.encoder.layers.8.self_attn.k_proj.bias', 'vision_model.encoder.layers.8.self_attn.k_proj.weight', 'vision_model.encoder.layers.8.self_attn.out_proj.bias', 'vision_model.encoder.layers.8.self_attn.out_proj.weight', 'vision_model.encoder.layers.8.self_attn.q_proj.bias', 'vision_model.encoder.layers.8.self_attn.q_proj.weight', 'vision_model.encoder.layers.8.self_attn.v_proj.bias', 'vision_model.encoder.layers.8.self_attn.v_proj.weight', 'vision_model.encoder.layers.9.layer_norm1.bias', 'vision_model.encoder.layers.9.layer_norm1.weight', 'vision_model.encoder.layers.9.layer_norm2.bias', 'vision_model.encoder.layers.9.layer_norm2.weight', 'vision_model.encoder.layers.9.mlp.fc1.bias', 'vision_model.encoder.layers.9.mlp.fc1.weight', 'vision_model.encoder.layers.9.mlp.fc2.bias', 'vision_model.encoder.layers.9.mlp.fc2.weight', 'vision_model.encoder.layers.9.self_attn.k_proj.bias', 'vision_model.encoder.layers.9.self_attn.k_proj.weight', 'vision_model.encoder.layers.9.self_attn.out_proj.bias', 'vision_model.encoder.layers.9.self_attn.out_proj.weight', 'vision_model.encoder.layers.9.self_attn.q_proj.bias', 'vision_model.encoder.layers.9.self_attn.q_proj.weight', 'vision_model.encoder.layers.9.self_attn.v_proj.bias', 'vision_model.encoder.layers.9.self_attn.v_proj.weight', 'vision_model.post_layernorm.bias', 'vision_model.post_layernorm.weight', 'vision_model.pre_layrnorm.bias', 'vision_model.pre_layrnorm.weight', 'visual_projection.weight']
+- This IS expected if you are initializing CLIPTextModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CLIPTextModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).[0m
+[32m[2025-07-22 15:43:11,082] [    INFO][0m - All the weights of CLIPTextModel were initialized from the model checkpoint at hunyuanvideo-community/HunyuanVideo.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use CLIPTextModel for predictions without further training.[0m
+Loading pipeline components...:  43%|████▎     | 3/7 [00:01<00:02,  1.84it/s]The config attributes {'Name': ['HunyuanVideo']} were passed to AutoencoderKLHunyuanVideo, but are not expected and will be ignored. Please verify your config.json configuration file.
+Loading pipeline components...: 100%|██████████| 7/7 [00:03<00:00,  2.26it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:03<00:00,  2.20it/s]
+[RANK 2] Loaded 946 prompts
+  0%|          | 0/316 [00:00<?, ?it/s]W0722 15:43:15.296653 187551 multiply_fwd_func.cc:76] got different data type, run type promotion automatically, this may cause data type been changed.
+  0%|          | 0/316 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "/root/paddlejob/workspace/env_run/chq/PaddleMIX/ppdiffusers/examples/HunyuanVideo/generation_teacache.py", line 283, in <module>
+    output = pipe(
+             ^^^^^
+  File "/root/paddlejob/workspace/guoyilong/miniconda3/envs/chq/lib/python3.11/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/paddlejob/workspace/guoyilong/miniconda3/envs/chq/lib/python3.11/site-packages/paddle/base/dygraph/base.py", line 396, in _decorate_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/paddlejob/workspace/env_run/chq/git/PaddleMIX/ppdiffusers/ppdiffusers/pipelines/hunyuan_video/pipeline_hunyuan_video.py", line 589, in __call__
+    prompt_embeds, pooled_prompt_embeds, prompt_attention_mask = self.encode_prompt(
+                                                                 ^^^^^^^^^^^^^^^^^^^
+  File "/root/paddlejob/workspace/env_run/chq/git/PaddleMIX/ppdiffusers/ppdiffusers/pipelines/hunyuan_video/pipeline_hunyuan_video.py", line 325, in encode_prompt
+    pooled_prompt_embeds = self._get_clip_prompt_embeds(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/paddlejob/workspace/env_run/chq/git/PaddleMIX/ppdiffusers/ppdiffusers/pipelines/hunyuan_video/pipeline_hunyuan_video.py", line 273, in _get_clip_prompt_embeds
+    text_inputs = self.tokenizer_2(
+                  ^^^^^^^^^^^^^^^^^
+  File "/root/paddlejob/workspace/guoyilong/miniconda3/envs/chq/lib/python3.11/site-packages/paddlenlp/transformers/tokenizer_utils_base.py", line 2435, in __call__
+    return self.batch_encode(
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/paddlejob/workspace/guoyilong/miniconda3/envs/chq/lib/python3.11/site-packages/paddlenlp/transformers/tokenizer_utils_base.py", line 2727, in batch_encode
+    return self._batch_encode_plus(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/paddlejob/workspace/guoyilong/miniconda3/envs/chq/lib/python3.11/site-packages/paddlenlp/transformers/tokenizer_utils.py", line 1465, in _batch_encode_plus
+    ids, pair_ids = ids_or_pair_ids
+    ^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+/root/paddlejob/workspace/guoyilong/miniconda3/envs/chq/lib/python3.11/site-packages/_distutils_hack/__init__.py:30: UserWarning: Setuptools is replacing distutils. Support for replacing an already imported distutils is deprecated. In the future, this condition will fail. Register concerns at https://github.com/pypa/setuptools/issues/new?template=distutils-deprecation.yml
+  warnings.warn(
+W0722 15:45:11.374732   984 gpu_resources.cc:114] Please NOTE: device: 3, GPU Compute Capability: 9.0, Driver API Version: 12.2, Runtime API Version: 12.8
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 3/3 [00:00<00:00, 28339.89it/s]
+The config attributes {'Name': ['HunyuanVideo']} were passed to HunyuanVideoTransformer3DModel, but are not expected and will be ignored. Please verify your config.json configuration file.
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:10<00:21, 10.62s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:20<00:10, 10.32s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  8.22s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  8.82s/it]
+Some weights of the model checkpoint at hunyuanvideo-community/HunyuanVideo were not used when initializing HunyuanVideoTransformer3DModel: ['norm_out.norm.bias']
+- This IS expected if you are initializing HunyuanVideoTransformer3DModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing HunyuanVideoTransformer3DModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[32m[2025-07-22 15:45:40,121] [    INFO][0m - Loading configuration file /root/.paddlenlp/models/hunyuanvideo-community/HunyuanVideo/text_encoder/config.json[0m
+[32m[2025-07-22 15:45:40,124] [    INFO][0m - Loading weights file from cache at /root/.paddlenlp/models/hunyuanvideo-community/HunyuanVideo/text_encoder/model_state.pdparams.index.json[0m
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 2/2 [00:00<00:00, 24600.02it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:15<00:15, 15.60s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:23<00:00, 10.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:23<00:00, 11.64s/it]
+[32m[2025-07-22 15:46:04,061] [    INFO][0m - All model checkpoint weights were used when initializing LlamaModel.
+[0m
+[32m[2025-07-22 15:46:04,062] [    INFO][0m - All the weights of LlamaModel were initialized from the model checkpoint at hunyuanvideo-community/HunyuanVideo.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaModel for predictions without further training.[0m
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s][32m[2025-07-22 15:46:04,068] [    INFO][0m - Loading configuration file /root/.cache/paddlenlp/ppdiffusers/hunyuanvideo-community/HunyuanVideo/text_encoder_2/config.json[0m
+[32m[2025-07-22 15:46:04,069] [    INFO][0m - Loading weights file from cache at /root/.cache/paddlenlp/ppdiffusers/hunyuanvideo-community/HunyuanVideo/text_encoder_2/model_state.pdparams[0m
+[32m[2025-07-22 15:46:05,377] [    INFO][0m - Loaded weights file from disk, setting weights to model.[0m
+[33m[2025-07-22 15:46:05,433] [ WARNING][0m - Loading from deprecated state_dict, please load new state_dict via setting `use_safetensors=True`.[0m
+[33m[2025-07-22 15:46:05,864] [ WARNING][0m - Some weights of the model checkpoint at hunyuanvideo-community/HunyuanVideo were not used when initializing CLIPTextModel: ['logit_scale', 'text_projection.weight', 'vision_model.embeddings.class_embedding', 'vision_model.embeddings.patch_embedding.weight', 'vision_model.embeddings.position_embedding.weight', 'vision_model.encoder.layers.0.layer_norm1.bias', 'vision_model.encoder.layers.0.layer_norm1.weight', 'vision_model.encoder.layers.0.layer_norm2.bias', 'vision_model.encoder.layers.0.layer_norm2.weight', 'vision_model.encoder.layers.0.mlp.fc1.bias', 'vision_model.encoder.layers.0.mlp.fc1.weight', 'vision_model.encoder.layers.0.mlp.fc2.bias', 'vision_model.encoder.layers.0.mlp.fc2.weight', 'vision_model.encoder.layers.0.self_attn.k_proj.bias', 'vision_model.encoder.layers.0.self_attn.k_proj.weight', 'vision_model.encoder.layers.0.self_attn.out_proj.bias', 'vision_model.encoder.layers.0.self_attn.out_proj.weight', 'vision_model.encoder.layers.0.self_attn.q_proj.bias', 'vision_model.encoder.layers.0.self_attn.q_proj.weight', 'vision_model.encoder.layers.0.self_attn.v_proj.bias', 'vision_model.encoder.layers.0.self_attn.v_proj.weight', 'vision_model.encoder.layers.1.layer_norm1.bias', 'vision_model.encoder.layers.1.layer_norm1.weight', 'vision_model.encoder.layers.1.layer_norm2.bias', 'vision_model.encoder.layers.1.layer_norm2.weight', 'vision_model.encoder.layers.1.mlp.fc1.bias', 'vision_model.encoder.layers.1.mlp.fc1.weight', 'vision_model.encoder.layers.1.mlp.fc2.bias', 'vision_model.encoder.layers.1.mlp.fc2.weight', 'vision_model.encoder.layers.1.self_attn.k_proj.bias', 'vision_model.encoder.layers.1.self_attn.k_proj.weight', 'vision_model.encoder.layers.1.self_attn.out_proj.bias', 'vision_model.encoder.layers.1.self_attn.out_proj.weight', 'vision_model.encoder.layers.1.self_attn.q_proj.bias', 'vision_model.encoder.layers.1.self_attn.q_proj.weight', 'vision_model.encoder.layers.1.self_attn.v_proj.bias', 'vision_model.encoder.layers.1.self_attn.v_proj.weight', 'vision_model.encoder.layers.10.layer_norm1.bias', 'vision_model.encoder.layers.10.layer_norm1.weight', 'vision_model.encoder.layers.10.layer_norm2.bias', 'vision_model.encoder.layers.10.layer_norm2.weight', 'vision_model.encoder.layers.10.mlp.fc1.bias', 'vision_model.encoder.layers.10.mlp.fc1.weight', 'vision_model.encoder.layers.10.mlp.fc2.bias', 'vision_model.encoder.layers.10.mlp.fc2.weight', 'vision_model.encoder.layers.10.self_attn.k_proj.bias', 'vision_model.encoder.layers.10.self_attn.k_proj.weight', 'vision_model.encoder.layers.10.self_attn.out_proj.bias', 'vision_model.encoder.layers.10.self_attn.out_proj.weight', 'vision_model.encoder.layers.10.self_attn.q_proj.bias', 'vision_model.encoder.layers.10.self_attn.q_proj.weight', 'vision_model.encoder.layers.10.self_attn.v_proj.bias', 'vision_model.encoder.layers.10.self_attn.v_proj.weight', 'vision_model.encoder.layers.11.layer_norm1.bias', 'vision_model.encoder.layers.11.layer_norm1.weight', 'vision_model.encoder.layers.11.layer_norm2.bias', 'vision_model.encoder.layers.11.layer_norm2.weight', 'vision_model.encoder.layers.11.mlp.fc1.bias', 'vision_model.encoder.layers.11.mlp.fc1.weight', 'vision_model.encoder.layers.11.mlp.fc2.bias', 'vision_model.encoder.layers.11.mlp.fc2.weight', 'vision_model.encoder.layers.11.self_attn.k_proj.bias', 'vision_model.encoder.layers.11.self_attn.k_proj.weight', 'vision_model.encoder.layers.11.self_attn.out_proj.bias', 'vision_model.encoder.layers.11.self_attn.out_proj.weight', 'vision_model.encoder.layers.11.self_attn.q_proj.bias', 'vision_model.encoder.layers.11.self_attn.q_proj.weight', 'vision_model.encoder.layers.11.self_attn.v_proj.bias', 'vision_model.encoder.layers.11.self_attn.v_proj.weight', 'vision_model.encoder.layers.12.layer_norm1.bias', 'vision_model.encoder.layers.12.layer_norm1.weight', 'vision_model.encoder.layers.12.layer_norm2.bias', 'vision_model.encoder.layers.12.layer_norm2.weight', 'vision_model.encoder.layers.12.mlp.fc1.bias', 'vision_model.encoder.layers.12.mlp.fc1.weight', 'vision_model.encoder.layers.12.mlp.fc2.bias', 'vision_model.encoder.layers.12.mlp.fc2.weight', 'vision_model.encoder.layers.12.self_attn.k_proj.bias', 'vision_model.encoder.layers.12.self_attn.k_proj.weight', 'vision_model.encoder.layers.12.self_attn.out_proj.bias', 'vision_model.encoder.layers.12.self_attn.out_proj.weight', 'vision_model.encoder.layers.12.self_attn.q_proj.bias', 'vision_model.encoder.layers.12.self_attn.q_proj.weight', 'vision_model.encoder.layers.12.self_attn.v_proj.bias', 'vision_model.encoder.layers.12.self_attn.v_proj.weight', 'vision_model.encoder.layers.13.layer_norm1.bias', 'vision_model.encoder.layers.13.layer_norm1.weight', 'vision_model.encoder.layers.13.layer_norm2.bias', 'vision_model.encoder.layers.13.layer_norm2.weight', 'vision_model.encoder.layers.13.mlp.fc1.bias', 'vision_model.encoder.layers.13.mlp.fc1.weight', 'vision_model.encoder.layers.13.mlp.fc2.bias', 'vision_model.encoder.layers.13.mlp.fc2.weight', 'vision_model.encoder.layers.13.self_attn.k_proj.bias', 'vision_model.encoder.layers.13.self_attn.k_proj.weight', 'vision_model.encoder.layers.13.self_attn.out_proj.bias', 'vision_model.encoder.layers.13.self_attn.out_proj.weight', 'vision_model.encoder.layers.13.self_attn.q_proj.bias', 'vision_model.encoder.layers.13.self_attn.q_proj.weight', 'vision_model.encoder.layers.13.self_attn.v_proj.bias', 'vision_model.encoder.layers.13.self_attn.v_proj.weight', 'vision_model.encoder.layers.14.layer_norm1.bias', 'vision_model.encoder.layers.14.layer_norm1.weight', 'vision_model.encoder.layers.14.layer_norm2.bias', 'vision_model.encoder.layers.14.layer_norm2.weight', 'vision_model.encoder.layers.14.mlp.fc1.bias', 'vision_model.encoder.layers.14.mlp.fc1.weight', 'vision_model.encoder.layers.14.mlp.fc2.bias', 'vision_model.encoder.layers.14.mlp.fc2.weight', 'vision_model.encoder.layers.14.self_attn.k_proj.bias', 'vision_model.encoder.layers.14.self_attn.k_proj.weight', 'vision_model.encoder.layers.14.self_attn.out_proj.bias', 'vision_model.encoder.layers.14.self_attn.out_proj.weight', 'vision_model.encoder.layers.14.self_attn.q_proj.bias', 'vision_model.encoder.layers.14.self_attn.q_proj.weight', 'vision_model.encoder.layers.14.self_attn.v_proj.bias', 'vision_model.encoder.layers.14.self_attn.v_proj.weight', 'vision_model.encoder.layers.15.layer_norm1.bias', 'vision_model.encoder.layers.15.layer_norm1.weight', 'vision_model.encoder.layers.15.layer_norm2.bias', 'vision_model.encoder.layers.15.layer_norm2.weight', 'vision_model.encoder.layers.15.mlp.fc1.bias', 'vision_model.encoder.layers.15.mlp.fc1.weight', 'vision_model.encoder.layers.15.mlp.fc2.bias', 'vision_model.encoder.layers.15.mlp.fc2.weight', 'vision_model.encoder.layers.15.self_attn.k_proj.bias', 'vision_model.encoder.layers.15.self_attn.k_proj.weight', 'vision_model.encoder.layers.15.self_attn.out_proj.bias', 'vision_model.encoder.layers.15.self_attn.out_proj.weight', 'vision_model.encoder.layers.15.self_attn.q_proj.bias', 'vision_model.encoder.layers.15.self_attn.q_proj.weight', 'vision_model.encoder.layers.15.self_attn.v_proj.bias', 'vision_model.encoder.layers.15.self_attn.v_proj.weight', 'vision_model.encoder.layers.16.layer_norm1.bias', 'vision_model.encoder.layers.16.layer_norm1.weight', 'vision_model.encoder.layers.16.layer_norm2.bias', 'vision_model.encoder.layers.16.layer_norm2.weight', 'vision_model.encoder.layers.16.mlp.fc1.bias', 'vision_model.encoder.layers.16.mlp.fc1.weight', 'vision_model.encoder.layers.16.mlp.fc2.bias', 'vision_model.encoder.layers.16.mlp.fc2.weight', 'vision_model.encoder.layers.16.self_attn.k_proj.bias', 'vision_model.encoder.layers.16.self_attn.k_proj.weight', 'vision_model.encoder.layers.16.self_attn.out_proj.bias', 'vision_model.encoder.layers.16.self_attn.out_proj.weight', 'vision_model.encoder.layers.16.self_attn.q_proj.bias', 'vision_model.encoder.layers.16.self_attn.q_proj.weight', 'vision_model.encoder.layers.16.self_attn.v_proj.bias', 'vision_model.encoder.layers.16.self_attn.v_proj.weight', 'vision_model.encoder.layers.17.layer_norm1.bias', 'vision_model.encoder.layers.17.layer_norm1.weight', 'vision_model.encoder.layers.17.layer_norm2.bias', 'vision_model.encoder.layers.17.layer_norm2.weight', 'vision_model.encoder.layers.17.mlp.fc1.bias', 'vision_model.encoder.layers.17.mlp.fc1.weight', 'vision_model.encoder.layers.17.mlp.fc2.bias', 'vision_model.encoder.layers.17.mlp.fc2.weight', 'vision_model.encoder.layers.17.self_attn.k_proj.bias', 'vision_model.encoder.layers.17.self_attn.k_proj.weight', 'vision_model.encoder.layers.17.self_attn.out_proj.bias', 'vision_model.encoder.layers.17.self_attn.out_proj.weight', 'vision_model.encoder.layers.17.self_attn.q_proj.bias', 'vision_model.encoder.layers.17.self_attn.q_proj.weight', 'vision_model.encoder.layers.17.self_attn.v_proj.bias', 'vision_model.encoder.layers.17.self_attn.v_proj.weight', 'vision_model.encoder.layers.18.layer_norm1.bias', 'vision_model.encoder.layers.18.layer_norm1.weight', 'vision_model.encoder.layers.18.layer_norm2.bias', 'vision_model.encoder.layers.18.layer_norm2.weight', 'vision_model.encoder.layers.18.mlp.fc1.bias', 'vision_model.encoder.layers.18.mlp.fc1.weight', 'vision_model.encoder.layers.18.mlp.fc2.bias', 'vision_model.encoder.layers.18.mlp.fc2.weight', 'vision_model.encoder.layers.18.self_attn.k_proj.bias', 'vision_model.encoder.layers.18.self_attn.k_proj.weight', 'vision_model.encoder.layers.18.self_attn.out_proj.bias', 'vision_model.encoder.layers.18.self_attn.out_proj.weight', 'vision_model.encoder.layers.18.self_attn.q_proj.bias', 'vision_model.encoder.layers.18.self_attn.q_proj.weight', 'vision_model.encoder.layers.18.self_attn.v_proj.bias', 'vision_model.encoder.layers.18.self_attn.v_proj.weight', 'vision_model.encoder.layers.19.layer_norm1.bias', 'vision_model.encoder.layers.19.layer_norm1.weight', 'vision_model.encoder.layers.19.layer_norm2.bias', 'vision_model.encoder.layers.19.layer_norm2.weight', 'vision_model.encoder.layers.19.mlp.fc1.bias', 'vision_model.encoder.layers.19.mlp.fc1.weight', 'vision_model.encoder.layers.19.mlp.fc2.bias', 'vision_model.encoder.layers.19.mlp.fc2.weight', 'vision_model.encoder.layers.19.self_attn.k_proj.bias', 'vision_model.encoder.layers.19.self_attn.k_proj.weight', 'vision_model.encoder.layers.19.self_attn.out_proj.bias', 'vision_model.encoder.layers.19.self_attn.out_proj.weight', 'vision_model.encoder.layers.19.self_attn.q_proj.bias', 'vision_model.encoder.layers.19.self_attn.q_proj.weight', 'vision_model.encoder.layers.19.self_attn.v_proj.bias', 'vision_model.encoder.layers.19.self_attn.v_proj.weight', 'vision_model.encoder.layers.2.layer_norm1.bias', 'vision_model.encoder.layers.2.layer_norm1.weight', 'vision_model.encoder.layers.2.layer_norm2.bias', 'vision_model.encoder.layers.2.layer_norm2.weight', 'vision_model.encoder.layers.2.mlp.fc1.bias', 'vision_model.encoder.layers.2.mlp.fc1.weight', 'vision_model.encoder.layers.2.mlp.fc2.bias', 'vision_model.encoder.layers.2.mlp.fc2.weight', 'vision_model.encoder.layers.2.self_attn.k_proj.bias', 'vision_model.encoder.layers.2.self_attn.k_proj.weight', 'vision_model.encoder.layers.2.self_attn.out_proj.bias', 'vision_model.encoder.layers.2.self_attn.out_proj.weight', 'vision_model.encoder.layers.2.self_attn.q_proj.bias', 'vision_model.encoder.layers.2.self_attn.q_proj.weight', 'vision_model.encoder.layers.2.self_attn.v_proj.bias', 'vision_model.encoder.layers.2.self_attn.v_proj.weight', 'vision_model.encoder.layers.20.layer_norm1.bias', 'vision_model.encoder.layers.20.layer_norm1.weight', 'vision_model.encoder.layers.20.layer_norm2.bias', 'vision_model.encoder.layers.20.layer_norm2.weight', 'vision_model.encoder.layers.20.mlp.fc1.bias', 'vision_model.encoder.layers.20.mlp.fc1.weight', 'vision_model.encoder.layers.20.mlp.fc2.bias', 'vision_model.encoder.layers.20.mlp.fc2.weight', 'vision_model.encoder.layers.20.self_attn.k_proj.bias', 'vision_model.encoder.layers.20.self_attn.k_proj.weight', 'vision_model.encoder.layers.20.self_attn.out_proj.bias', 'vision_model.encoder.layers.20.self_attn.out_proj.weight', 'vision_model.encoder.layers.20.self_attn.q_proj.bias', 'vision_model.encoder.layers.20.self_attn.q_proj.weight', 'vision_model.encoder.layers.20.self_attn.v_proj.bias', 'vision_model.encoder.layers.20.self_attn.v_proj.weight', 'vision_model.encoder.layers.21.layer_norm1.bias', 'vision_model.encoder.layers.21.layer_norm1.weight', 'vision_model.encoder.layers.21.layer_norm2.bias', 'vision_model.encoder.layers.21.layer_norm2.weight', 'vision_model.encoder.layers.21.mlp.fc1.bias', 'vision_model.encoder.layers.21.mlp.fc1.weight', 'vision_model.encoder.layers.21.mlp.fc2.bias', 'vision_model.encoder.layers.21.mlp.fc2.weight', 'vision_model.encoder.layers.21.self_attn.k_proj.bias', 'vision_model.encoder.layers.21.self_attn.k_proj.weight', 'vision_model.encoder.layers.21.self_attn.out_proj.bias', 'vision_model.encoder.layers.21.self_attn.out_proj.weight', 'vision_model.encoder.layers.21.self_attn.q_proj.bias', 'vision_model.encoder.layers.21.self_attn.q_proj.weight', 'vision_model.encoder.layers.21.self_attn.v_proj.bias', 'vision_model.encoder.layers.21.self_attn.v_proj.weight', 'vision_model.encoder.layers.22.layer_norm1.bias', 'vision_model.encoder.layers.22.layer_norm1.weight', 'vision_model.encoder.layers.22.layer_norm2.bias', 'vision_model.encoder.layers.22.layer_norm2.weight', 'vision_model.encoder.layers.22.mlp.fc1.bias', 'vision_model.encoder.layers.22.mlp.fc1.weight', 'vision_model.encoder.layers.22.mlp.fc2.bias', 'vision_model.encoder.layers.22.mlp.fc2.weight', 'vision_model.encoder.layers.22.self_attn.k_proj.bias', 'vision_model.encoder.layers.22.self_attn.k_proj.weight', 'vision_model.encoder.layers.22.self_attn.out_proj.bias', 'vision_model.encoder.layers.22.self_attn.out_proj.weight', 'vision_model.encoder.layers.22.self_attn.q_proj.bias', 'vision_model.encoder.layers.22.self_attn.q_proj.weight', 'vision_model.encoder.layers.22.self_attn.v_proj.bias', 'vision_model.encoder.layers.22.self_attn.v_proj.weight', 'vision_model.encoder.layers.23.layer_norm1.bias', 'vision_model.encoder.layers.23.layer_norm1.weight', 'vision_model.encoder.layers.23.layer_norm2.bias', 'vision_model.encoder.layers.23.layer_norm2.weight', 'vision_model.encoder.layers.23.mlp.fc1.bias', 'vision_model.encoder.layers.23.mlp.fc1.weight', 'vision_model.encoder.layers.23.mlp.fc2.bias', 'vision_model.encoder.layers.23.mlp.fc2.weight', 'vision_model.encoder.layers.23.self_attn.k_proj.bias', 'vision_model.encoder.layers.23.self_attn.k_proj.weight', 'vision_model.encoder.layers.23.self_attn.out_proj.bias', 'vision_model.encoder.layers.23.self_attn.out_proj.weight', 'vision_model.encoder.layers.23.self_attn.q_proj.bias', 'vision_model.encoder.layers.23.self_attn.q_proj.weight', 'vision_model.encoder.layers.23.self_attn.v_proj.bias', 'vision_model.encoder.layers.23.self_attn.v_proj.weight', 'vision_model.encoder.layers.3.layer_norm1.bias', 'vision_model.encoder.layers.3.layer_norm1.weight', 'vision_model.encoder.layers.3.layer_norm2.bias', 'vision_model.encoder.layers.3.layer_norm2.weight', 'vision_model.encoder.layers.3.mlp.fc1.bias', 'vision_model.encoder.layers.3.mlp.fc1.weight', 'vision_model.encoder.layers.3.mlp.fc2.bias', 'vision_model.encoder.layers.3.mlp.fc2.weight', 'vision_model.encoder.layers.3.self_attn.k_proj.bias', 'vision_model.encoder.layers.3.self_attn.k_proj.weight', 'vision_model.encoder.layers.3.self_attn.out_proj.bias', 'vision_model.encoder.layers.3.self_attn.out_proj.weight', 'vision_model.encoder.layers.3.self_attn.q_proj.bias', 'vision_model.encoder.layers.3.self_attn.q_proj.weight', 'vision_model.encoder.layers.3.self_attn.v_proj.bias', 'vision_model.encoder.layers.3.self_attn.v_proj.weight', 'vision_model.encoder.layers.4.layer_norm1.bias', 'vision_model.encoder.layers.4.layer_norm1.weight', 'vision_model.encoder.layers.4.layer_norm2.bias', 'vision_model.encoder.layers.4.layer_norm2.weight', 'vision_model.encoder.layers.4.mlp.fc1.bias', 'vision_model.encoder.layers.4.mlp.fc1.weight', 'vision_model.encoder.layers.4.mlp.fc2.bias', 'vision_model.encoder.layers.4.mlp.fc2.weight', 'vision_model.encoder.layers.4.self_attn.k_proj.bias', 'vision_model.encoder.layers.4.self_attn.k_proj.weight', 'vision_model.encoder.layers.4.self_attn.out_proj.bias', 'vision_model.encoder.layers.4.self_attn.out_proj.weight', 'vision_model.encoder.layers.4.self_attn.q_proj.bias', 'vision_model.encoder.layers.4.self_attn.q_proj.weight', 'vision_model.encoder.layers.4.self_attn.v_proj.bias', 'vision_model.encoder.layers.4.self_attn.v_proj.weight', 'vision_model.encoder.layers.5.layer_norm1.bias', 'vision_model.encoder.layers.5.layer_norm1.weight', 'vision_model.encoder.layers.5.layer_norm2.bias', 'vision_model.encoder.layers.5.layer_norm2.weight', 'vision_model.encoder.layers.5.mlp.fc1.bias', 'vision_model.encoder.layers.5.mlp.fc1.weight', 'vision_model.encoder.layers.5.mlp.fc2.bias', 'vision_model.encoder.layers.5.mlp.fc2.weight', 'vision_model.encoder.layers.5.self_attn.k_proj.bias', 'vision_model.encoder.layers.5.self_attn.k_proj.weight', 'vision_model.encoder.layers.5.self_attn.out_proj.bias', 'vision_model.encoder.layers.5.self_attn.out_proj.weight', 'vision_model.encoder.layers.5.self_attn.q_proj.bias', 'vision_model.encoder.layers.5.self_attn.q_proj.weight', 'vision_model.encoder.layers.5.self_attn.v_proj.bias', 'vision_model.encoder.layers.5.self_attn.v_proj.weight', 'vision_model.encoder.layers.6.layer_norm1.bias', 'vision_model.encoder.layers.6.layer_norm1.weight', 'vision_model.encoder.layers.6.layer_norm2.bias', 'vision_model.encoder.layers.6.layer_norm2.weight', 'vision_model.encoder.layers.6.mlp.fc1.bias', 'vision_model.encoder.layers.6.mlp.fc1.weight', 'vision_model.encoder.layers.6.mlp.fc2.bias', 'vision_model.encoder.layers.6.mlp.fc2.weight', 'vision_model.encoder.layers.6.self_attn.k_proj.bias', 'vision_model.encoder.layers.6.self_attn.k_proj.weight', 'vision_model.encoder.layers.6.self_attn.out_proj.bias', 'vision_model.encoder.layers.6.self_attn.out_proj.weight', 'vision_model.encoder.layers.6.self_attn.q_proj.bias', 'vision_model.encoder.layers.6.self_attn.q_proj.weight', 'vision_model.encoder.layers.6.self_attn.v_proj.bias', 'vision_model.encoder.layers.6.self_attn.v_proj.weight', 'vision_model.encoder.layers.7.layer_norm1.bias', 'vision_model.encoder.layers.7.layer_norm1.weight', 'vision_model.encoder.layers.7.layer_norm2.bias', 'vision_model.encoder.layers.7.layer_norm2.weight', 'vision_model.encoder.layers.7.mlp.fc1.bias', 'vision_model.encoder.layers.7.mlp.fc1.weight', 'vision_model.encoder.layers.7.mlp.fc2.bias', 'vision_model.encoder.layers.7.mlp.fc2.weight', 'vision_model.encoder.layers.7.self_attn.k_proj.bias', 'vision_model.encoder.layers.7.self_attn.k_proj.weight', 'vision_model.encoder.layers.7.self_attn.out_proj.bias', 'vision_model.encoder.layers.7.self_attn.out_proj.weight', 'vision_model.encoder.layers.7.self_attn.q_proj.bias', 'vision_model.encoder.layers.7.self_attn.q_proj.weight', 'vision_model.encoder.layers.7.self_attn.v_proj.bias', 'vision_model.encoder.layers.7.self_attn.v_proj.weight', 'vision_model.encoder.layers.8.layer_norm1.bias', 'vision_model.encoder.layers.8.layer_norm1.weight', 'vision_model.encoder.layers.8.layer_norm2.bias', 'vision_model.encoder.layers.8.layer_norm2.weight', 'vision_model.encoder.layers.8.mlp.fc1.bias', 'vision_model.encoder.layers.8.mlp.fc1.weight', 'vision_model.encoder.layers.8.mlp.fc2.bias', 'vision_model.encoder.layers.8.mlp.fc2.weight', 'vision_model.encoder.layers.8.self_attn.k_proj.bias', 'vision_model.encoder.layers.8.self_attn.k_proj.weight', 'vision_model.encoder.layers.8.self_attn.out_proj.bias', 'vision_model.encoder.layers.8.self_attn.out_proj.weight', 'vision_model.encoder.layers.8.self_attn.q_proj.bias', 'vision_model.encoder.layers.8.self_attn.q_proj.weight', 'vision_model.encoder.layers.8.self_attn.v_proj.bias', 'vision_model.encoder.layers.8.self_attn.v_proj.weight', 'vision_model.encoder.layers.9.layer_norm1.bias', 'vision_model.encoder.layers.9.layer_norm1.weight', 'vision_model.encoder.layers.9.layer_norm2.bias', 'vision_model.encoder.layers.9.layer_norm2.weight', 'vision_model.encoder.layers.9.mlp.fc1.bias', 'vision_model.encoder.layers.9.mlp.fc1.weight', 'vision_model.encoder.layers.9.mlp.fc2.bias', 'vision_model.encoder.layers.9.mlp.fc2.weight', 'vision_model.encoder.layers.9.self_attn.k_proj.bias', 'vision_model.encoder.layers.9.self_attn.k_proj.weight', 'vision_model.encoder.layers.9.self_attn.out_proj.bias', 'vision_model.encoder.layers.9.self_attn.out_proj.weight', 'vision_model.encoder.layers.9.self_attn.q_proj.bias', 'vision_model.encoder.layers.9.self_attn.q_proj.weight', 'vision_model.encoder.layers.9.self_attn.v_proj.bias', 'vision_model.encoder.layers.9.self_attn.v_proj.weight', 'vision_model.post_layernorm.bias', 'vision_model.post_layernorm.weight', 'vision_model.pre_layrnorm.bias', 'vision_model.pre_layrnorm.weight', 'visual_projection.weight']
+- This IS expected if you are initializing CLIPTextModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing CLIPTextModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).[0m
+[32m[2025-07-22 15:46:05,865] [    INFO][0m - All the weights of CLIPTextModel were initialized from the model checkpoint at hunyuanvideo-community/HunyuanVideo.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use CLIPTextModel for predictions without further training.[0m
+Loading pipeline components...:  43%|████▎     | 3/7 [00:01<00:02,  1.66it/s]The config attributes {'Name': ['HunyuanVideo']} were passed to AutoencoderKLHunyuanVideo, but are not expected and will be ignored. Please verify your config.json configuration file.
+Loading pipeline components...: 100%|██████████| 7/7 [00:03<00:00,  2.06it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:03<00:00,  2.00it/s]
+[RANK 2] Loaded 946 prompts
+  0%|          | 0/316 [00:00<?, ?it/s]W0722 15:46:09.980921   984 multiply_fwd_func.cc:76] got different data type, run type promotion automatically, this may cause data type been changed.
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<01:33,  1.90s/it][A
+  4%|▍         | 2/50 [00:02<01:01,  1.28s/it][A
+  6%|▌         | 3/50 [00:03<00:55,  1.19s/it][A
+  8%|▊         | 4/50 [00:04<00:52,  1.15s/it][A
+ 10%|█         | 5/50 [00:06<00:50,  1.13s/it][A
+ 12%|█▏        | 6/50 [00:07<00:48,  1.11s/it][A
+ 14%|█▍        | 7/50 [00:08<00:47,  1.10s/it][A
+ 16%|█▌        | 8/50 [00:09<00:46,  1.10s/it][A
+ 18%|█▊        | 9/50 [00:10<00:44,  1.09s/it][A
+ 20%|██        | 10/50 [00:11<00:43,  1.09s/it][A
+ 22%|██▏       | 11/50 [00:12<00:42,  1.09s/it][A
+ 24%|██▍       | 12/50 [00:13<00:41,  1.09s/it][A
+ 26%|██▌       | 13/50 [00:14<00:40,  1.09s/it][A
+ 28%|██▊       | 14/50 [00:15<00:39,  1.09s/it][A
+ 30%|███       | 15/50 [00:16<00:38,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:19<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:20<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:21<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:22<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:23<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:24<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:25<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:26<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:27<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:28<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:32<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:33<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:34<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:35<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:36<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:37<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:38<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:39<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:40<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:44<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:45<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:46<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:47<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:48<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:49<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:50<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:51<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:52<00:02,  1.08s/it][A
+ 98%|█████████▊| 49/50 [00:53<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.10s/it]
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.08s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.08s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.08s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+  0%|          | 1/316 [02:08<11:12:32, 128.10s/it]
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.05s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.08s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.08s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+  1%|          | 2/316 [04:12<10:58:19, 125.80s/it]
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+  1%|          | 3/316 [06:16<10:52:38, 125.11s/it]
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.09s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+  1%|▏         | 4/316 [08:20<10:48:47, 124.77s/it]
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.09s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:28<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:53<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.09s/it][A
+ 30%|███       | 15/50 [00:16<00:38,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+  2%|▏         | 5/316 [10:25<10:45:46, 124.59s/it]
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.09s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.09s/it][A
+ 30%|███       | 15/50 [00:16<00:38,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:28<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:25,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:53<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.09s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.09s/it][A
+ 30%|███       | 15/50 [00:16<00:38,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:28<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:53<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+  2%|▏         | 6/316 [12:29<10:43:10, 124.49s/it]
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.09s/it][A
+ 30%|███       | 15/50 [00:16<00:38,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:28<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.09s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.09s/it][A
+ 30%|███       | 15/50 [00:16<00:38,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:28<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:25,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+  2%|▏         | 7/316 [14:33<10:40:42, 124.41s/it]
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.08s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.08s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.08s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.08s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.08s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.08s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.08s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+  3%|▎         | 8/316 [16:37<10:38:11, 124.32s/it]
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
+ 96%|█████████▌| 48/50 [00:51<00:02,  1.09s/it][A
+ 98%|█████████▊| 49/50 [00:52<00:01,  1.09s/it][A
+100%|██████████| 50/50 [00:54<00:00,  1.09s/it][A100%|██████████| 50/50 [00:54<00:00,  1.08s/it]
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:53,  1.09s/it][A
+  4%|▍         | 2/50 [00:01<00:45,  1.06it/s][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:47,  1.04s/it][A
+ 10%|█         | 5/50 [00:05<00:47,  1.06s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:07<00:46,  1.07s/it][A
+ 16%|█▌        | 8/50 [00:08<00:45,  1.08s/it][A
+ 18%|█▊        | 9/50 [00:09<00:44,  1.08s/it][A
+ 20%|██        | 10/50 [00:10<00:43,  1.08s/it][A
+ 22%|██▏       | 11/50 [00:11<00:42,  1.08s/it][A
+ 24%|██▍       | 12/50 [00:12<00:41,  1.08s/it][A
+ 26%|██▌       | 13/50 [00:13<00:40,  1.08s/it][A
+ 28%|██▊       | 14/50 [00:14<00:39,  1.08s/it][A
+ 30%|███       | 15/50 [00:16<00:37,  1.09s/it][A
+ 32%|███▏      | 16/50 [00:17<00:36,  1.09s/it][A
+ 34%|███▍      | 17/50 [00:18<00:35,  1.09s/it][A
+ 36%|███▌      | 18/50 [00:19<00:34,  1.09s/it][A
+ 38%|███▊      | 19/50 [00:20<00:33,  1.09s/it][A
+ 40%|████      | 20/50 [00:21<00:32,  1.09s/it][A
+ 42%|████▏     | 21/50 [00:22<00:31,  1.09s/it][A
+ 44%|████▍     | 22/50 [00:23<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:24<00:29,  1.09s/it][A
+ 48%|████▊     | 24/50 [00:25<00:28,  1.09s/it][A
+ 50%|█████     | 25/50 [00:26<00:27,  1.09s/it][A
+ 52%|█████▏    | 26/50 [00:27<00:26,  1.09s/it][A
+ 54%|█████▍    | 27/50 [00:29<00:24,  1.09s/it][A
+ 56%|█████▌    | 28/50 [00:30<00:23,  1.09s/it][A
+ 58%|█████▊    | 29/50 [00:31<00:22,  1.09s/it][A
+ 60%|██████    | 30/50 [00:32<00:21,  1.09s/it][A
+ 62%|██████▏   | 31/50 [00:33<00:20,  1.09s/it][A
+ 64%|██████▍   | 32/50 [00:34<00:19,  1.09s/it][A
+ 66%|██████▌   | 33/50 [00:35<00:18,  1.09s/it][A
+ 68%|██████▊   | 34/50 [00:36<00:17,  1.09s/it][A
+ 70%|███████   | 35/50 [00:37<00:16,  1.09s/it][A
+ 72%|███████▏  | 36/50 [00:38<00:15,  1.09s/it][A
+ 74%|███████▍  | 37/50 [00:39<00:14,  1.09s/it][A
+ 76%|███████▌  | 38/50 [00:41<00:13,  1.09s/it][A
+ 78%|███████▊  | 39/50 [00:42<00:11,  1.09s/it][A
+ 80%|████████  | 40/50 [00:43<00:10,  1.09s/it][A
+ 82%|████████▏ | 41/50 [00:44<00:09,  1.09s/it][A
+ 84%|████████▍ | 42/50 [00:45<00:08,  1.09s/it][A
+ 86%|████████▌ | 43/50 [00:46<00:07,  1.09s/it][A
+ 88%|████████▊ | 44/50 [00:47<00:06,  1.09s/it][A
+ 90%|█████████ | 45/50 [00:48<00:05,  1.09s/it][A
+ 92%|█████████▏| 46/50 [00:49<00:04,  1.09s/it][A
+ 94%|█████████▍| 47/50 [00:50<00:03,  1.09s/it][A
